@@ -1,0 +1,16 @@
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+
+sentences = [
+    "I love dogs",
+    "I like puppies",
+    "SwiftUI is used to build iOS apps",
+    "How can I create an iPhone application?"
+]
+
+embeddings = model.encode(sentences)
+
+similarities = model.similarity(embeddings, embeddings)
+
+print(similarities)
