@@ -4,14 +4,12 @@ model = SentenceTransformer(
     "sentence-transformers/all-MiniLM-L6-v2"
 )
 
-chunks = [
-    "SwiftUI is Apple's modern UI framework.",
-    "State management can be done using @State.",
-    "NavigationStack is used for navigation.",
-    "SwiftUI integrates with UIKit."
-]
+with open("doc_intro.txt", "r") as file:
+    chunk = file.read()
 
-query = "How do I navigate between screens?"
+chunks = chunk.split("\n\n")
+
+query = "Can DocC generate websites?"
 
 chunk_embeddings = model.encode(chunks)
 query_embedding = model.encode(query)
