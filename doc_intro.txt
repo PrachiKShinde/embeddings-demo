@@ -1,0 +1,7 @@
+The DocC documentation compiler converts Markdown-based text into rich documentation for Swift and Objective-C frameworks, packages, and apps.
+
+The generated documentation can be viewed inside Xcode's documentation window.
+
+You can also host the generated documentation as a website.
+
+DocC supports tutorials, articles, symbol documentation, and technology overviews.
